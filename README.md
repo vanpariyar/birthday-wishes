@@ -6,7 +6,7 @@ This is the simple birthday wishes HTML template that show name as per request
 
 change 
 
-` https://vanpariyar.github.io/birthday-wishes/?name=YourDeaePersonName `
+` https://vanpariyar.github.io/birthday-wishes/?name=YourDearPersonName `
 
 
 This is created from code pan given below
