@@ -15,11 +15,8 @@ var parseQueryString = function() {
 //Example how to use it: 
 var params = parseQueryString(); 
 
-if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage('resize', "*");
-}
     
 //const params = new URL(location.href).searchParams;
 //const name = params.get('name');
 
-document.getElementById('name').innerText = ( params.name ) ? params.name : 'To You'; 
+document.getElementById('name').innerText = ( params.name ) ? decodeURIComponent(params.name) : 'To You'; 
