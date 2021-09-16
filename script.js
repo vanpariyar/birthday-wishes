@@ -8,7 +8,7 @@ var generatedLink = document.getElementById('generated-link');
 
 function handleTemplateSubmit(e){
     e.preventDefault();
-    let link = window.location.protocol + '//' + window.location.host;
+    let link = window.location.href;
 
     // var search_params = new URLSearchParams(); 
 
