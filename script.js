@@ -22,7 +22,7 @@ function handleTemplateSubmit(e){
 
     // link = link+"/template"+templateSelect.value+"/?"+query_string;
 
-    link = link+"/template"+templateSelect.value+"/?name="+personName.value+"&message="+message.value+"&from="+fromName.value;
+    link = link+"template"+templateSelect.value+"/?name="+personName.value+"&message="+message.value+"&from="+fromName.value;
     generatedLink.innerText = link;
 }
 
