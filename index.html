@@ -1,27 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Happy Birthday</title>
-  <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script data-ad-client="ca-pub-5659963957549282" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script type="application/javascript">
+	var doNotTrack = false;
+	if (!doNotTrack) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-165932508-1', 'auto');
+
+		ga('send', 'pageview');
+	}
+	</script>
+	<title>Satsang Sabha Quiz</title>
+	<link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+
 </head>
-
 <body>
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/DenverCoder1/Responsive-Birthday-Card/main/birthday.svg" alt="birthday"
-      class="birthday">
-    <div class="text">
-      <h1>Happy Birthday! <span id="name">To you!!!</span> </h1>
-      <p>I hope you have a wonderful birthday</p>
-      <p class="muted">- Enjoy Birthday</p>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Birthday Card Generator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://vanpariyar.in/tools">
+				  <i class="fa fa-list-alt"></i> More Tools
+				</a>
+			</li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="https://github.com/vanpariyar/quiz-from-sheets">
+                  <i class="fa fa-book"></i>Features
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.buymeacoffee.com/vanpariyar">
+                <i class="fa fa-user"></i> Donate
+              </a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <i class="fa fa-user"></i> Hello Welcome
+          </span>
+        </div>
+	</nav>
+    <div class="container">
+        <div class="text-center my-5">
+            <h3>Birthday Card Generator</h3>
+            <hr>
+        <form id="template-form">
+            <div class="mb-3">
+              <label for="person-name" class="form-label">Birthday Person Name</label>
+              <input type="text" class="form-control" id="person-name" placeholder="Birthday Person Name">
+            </div>
+            <div class="mb-3">
+              <label for="birthday-message" class="form-label">message</label>
+              <textarea class="form-control" id="birthday-message" placeholder="message"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="from-name" class="form-label">From name</label>
+                <input type="text" class="form-control" id="from-name" placeholder="From Name">
+              </div>
+            <div class="mb-3">
+                <label for="template-select" class="form-label">Select Template</label>
+                <select id="template-select" class="form-control template-select" aria-label="Select Template for the birthday">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Link</button>
+          </form>
+        </div>  
     </div>
-    <div class="space"></div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <div class="container text-center">
+        <code id="generated-link"></code>
+    </div>
+    <footer class="container-fluid bg-dark mt-5">
+		<h1 class="text-white text-center pt-3">🥳🎉 Happy Birthday 🎊</h1>
+		<h6 class="text-white text-center pb-3">Made with ❤️ for amazing people like you</h6>
+	</footer>	
 
+	<h6 class="text-center pt-1">Developed with bless of Bhagwan Swaminarayan by <a href="https://vanpariyar.in" target="_blank">Ronak Vanpariya</a></h6>
+</body>
 </html>
+ 
+<script src="script.js"></script>
