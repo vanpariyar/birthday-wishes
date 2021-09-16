@@ -1,22 +1,30 @@
-var parseQueryString = function() {
+var personName = document.getElementById('person-name');
+var message = document.getElementById('birthday-message');
+var fromName = document.getElementById('from-name');
+var templateSelect = document.getElementById('template-select');
+var templateForm = document.getElementById('template-form');
 
-    var str = window.location.search;
-    var objURL = {};
+var generatedLink = document.getElementById('generated-link');
 
-    str.replace(
-        new RegExp( "([^?=&]+)(=([^&]*))?", "g" ),
-        function( $0, $1, $2, $3 ){
-            objURL[ $1 ] = $3;
-        }
-    );
-    return objURL;
-};
+function handleTemplateSubmit(e){
+    e.preventDefault();
+    let link = window.location.protocol + '//' + window.location.host;
 
-//Example how to use it: 
-var params = parseQueryString(); 
+    // var search_params = new URLSearchParams(); 
 
-    
-//const params = new URL(location.href).searchParams;
-//const name = params.get('name');
+    // append parameters
+    // search_params.append('name', personName.value);
+    // search_params.append('message', message.value);
+    // search_params.append('from', fromName.value);
+    // query string
+    // var query_string = search_params.toString();
+    // console.log(query_string)
 
-document.getElementById('name').innerText = ( params.name ) ? decodeURIComponent(params.name) : 'To You'; 
+    // link = link+"/template"+templateSelect.value+"/?"+query_string;
+
+    link = link+"/template"+templateSelect.value+"/?name="+personName.value+"&message="+message.value+"&from="+fromName.value;
+    generatedLink.innerText = link;
+}
+
+
+templateForm.addEventListener('submit', handleTemplateSubmit);
